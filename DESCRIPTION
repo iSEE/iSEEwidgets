@@ -1,23 +1,27 @@
-Package: MyBioconductorPackage
-Title: Demonstration of a Bioconductor Package
+Package: iSEEwidgets
+Title: Shiny Widgets from the iSEE Develeopers
 Version: 0.99.0
-Date: 2022-05-10
-Authors@R: 
-    c(person("Kevin", "Rue", "Christophe", "kevinrue@users.noreply.github.com",
-             role = c("aut", "cre"),
-             comment = c(ORCID = "0000-0003-3899-3872")))
-Description: This package demonstrates the set up of a Bioconductor-friendly
-    package using the packages usethis and biocthis. The setup includes the
-    initialisation of a git repository as well as the connection of the local
-    repository to the GitHub website.
+Date: 2022-10-08
+Authors@R: c(person("Kevin", "Rue-Albrecht", role = c("aut", "cre"), email = "kevinrue67@gmail.com", comment = c(ORCID = "0000-0003-3899-3872")),
+    person("Federico", "Marini", role="aut", email="marinif@uni-mainz.de", comment = c(ORCID = '0000-0003-3252-7758')),
+    person("Charlotte", "Soneson", role="aut", email="charlottesoneson@gmail.com", comment = c(ORCID = '0000-0003-3833-2169')),
+    person("Aaron", "Lun", role="aut", email="infinite.monkeys.with.keyboards@gmail.com", comment = c(ORCID = '0000-0002-3564-4813')))
+Description: This package defines Shiny widgets originally developed for iSEE apps.
+    Those widgets replace similar elements implemented in other packages,
+    or extend their functionality in iSEE apps.
+    Specifically, this package is limited to widgets that may be re-used in
+    independent Shiny apps without the need to install iSEE.
 License: Artistic-2.0
-URL: https://github.com/kevinrue/MyBioconductorPackage
-BugReports: https://support.bioconductor.org/t/MyBioconductorPackage
+URL: https://github.com/kevinrue/iSEEwidgets
+BugReports: https://support.bioconductor.org/t/iSEEwidgets
 biocViews: Software,
-    Infrastructure
+    Infrastructure,
+    ShinyApps
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
+Imports:
+    shiny
 Suggests: 
     BiocStyle,
     covr,
