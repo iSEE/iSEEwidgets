@@ -25,14 +25,26 @@
 #'
 #' @examples
 #' library(shiny)
-#' collapseBox("SomePanelType1_ParamBoxOpen",
-#'     title="Custom parameters",
-#'     open=FALSE,
-#'     selectInput("SomePanelType1_Thing",
-#'         label="What thing?",
-#'         choices=LETTERS, selected="A"
+#' ui <- fluidPage(
+#'     fluidRow(
+#'         column(width=6L, collapseBox(
+#'             id="collapseBox_001",
+#'             title="Collapsible box",
+#'             open=FALSE,
+#'             p("A simple paragraph."),
+#'             selectInput("selectInput_001",
+#'                 label="Select a letter",
+#'                 choices=LETTERS, selected="A"
+#'             )
+#'         )),
+#'         column(width=6L, p(
+#'             "On the left is an example of a", code("collapseBox"), ".", br(),
+#'             "Click on the title of the box to expand or collapse its contents."
+#'         ))
 #'     )
 #' )
+#' 
+#' shinyApp(ui, server = function(input, output) { })
 #'
 #' @export
 #' @importFrom shiny h4 tagList tags singleton
