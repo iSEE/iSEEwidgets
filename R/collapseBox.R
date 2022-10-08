@@ -25,6 +25,8 @@
 #'
 #' @examples
 #' library(shiny)
+#' ## Only run examples in interactive R sessions
+#' if (interactive()) {
 #' ui <- fluidPage(
 #'     fluidRow(
 #'         column(width=6L, collapseBox(
@@ -45,7 +47,7 @@
 #' )
 #' 
 #' shinyApp(ui, server = function(input, output) { })
-#'
+#' }
 #' @export
 #' @importFrom shiny h4 tagList tags singleton
 collapseBox <- function(id, title, ..., open = FALSE, style = NULL) {

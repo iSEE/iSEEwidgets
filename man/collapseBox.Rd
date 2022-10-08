@@ -36,6 +36,8 @@ The underlying Javascript code for this object is present in \code{inst/www} and
 
 \examples{
 library(shiny)
+## Only run examples in interactive R sessions
+if (interactive()) {
 ui <- fluidPage(
     fluidRow(
         column(width=6L, collapseBox(
@@ -56,7 +58,7 @@ ui <- fluidPage(
 )
 
 shinyApp(ui, server = function(input, output) { })
-
+}
 }
 \seealso{
 \pkg{shinyBS}, from which the Javascript code was derived.
