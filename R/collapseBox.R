@@ -23,8 +23,6 @@
 #' @seealso
 #' \pkg{shinyBS}, from which the Javascript code was derived.
 #'
-#' \code{\link{.defineInterface}}, which should return a list of these collapsible boxes.
-#'
 #' @examples
 #' library(shiny)
 #' collapseBox("SomePanelType1_ParamBoxOpen",
