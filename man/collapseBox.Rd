@@ -23,14 +23,6 @@ A HTML tag object containing a collapsible box.
 \description{
 A custom collapsible box with Shiny inputs upon collapse, more or less stolen from \pkg{shinyBS}.
 }
-\details{
-Collapsible boxes are used to hold parameters in the \dQuote{parameter boxes} described in \code{\link{.defineInterface}}.
-It is recommended to format the \code{id} as \code{PANEL_SLOT} where \code{PANEL} is the name of the panel associated with the box and \code{SLOT} is the name of the slot that specifies whether this box should be open or not at initialization.
-(See \linkS4class{Panel} for some examples with \code{DataBoxOpen}.)
-
-Do not confuse these boxes with the \code{shinydashboard::box}es, which are used to hold the plot and table panels.
-Adding to the nomenclature confusion is the fact that our collapsible boxes are implemented in Javascript using the Bootstrap \dQuote{panel} classes, which in turn has nothing to do with our \linkS4class{Panel} classes.
-}
 \section{Comments on \pkg{shinyBS}}{
 
 We would have preferred to use \code{bsCollapse} from \pkg{shinyBS}.
@@ -60,5 +52,5 @@ collapseBox("SomePanelType1_ParamBoxOpen",
 \code{\link{.defineInterface}}, which should return a list of these collapsible boxes.
 }
 \author{
-Aaron Lun
+Aaron Lun, Kevin Rue-Albrecht
 }

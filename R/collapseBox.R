@@ -37,7 +37,7 @@
 #' )
 #'
 #' @export
-#' @importFrom shiny tagList tags singleton
+#' @importFrom shiny h4 tagList tags singleton
 collapseBox <- function(id, title, ..., open = FALSE, style = NULL) {
     if(is.null(style)) {
         style <- "default"
